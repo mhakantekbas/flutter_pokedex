@@ -12,7 +12,7 @@ class HomePAge extends StatelessWidget {
     return Scaffold(
       body: OrientationBuilder(
         builder: (context, orientation) => Column(
-          children: const [
+          children: [
             AppTitle(),
             Expanded(child: PokemonList()),
           ],
