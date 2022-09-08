@@ -1,15 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_pokedex/constants/constants.dart';
 import 'package:flutter_pokedex/constants/ui_helper.dart';
 
 import 'package:flutter_pokedex/model/pokemon_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class PokeInformation extends StatelessWidget {
   PokemonModel pokemon;
   PokeInformation({
