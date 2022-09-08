@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokedex/constants/constants.dart';
 import 'package:flutter_pokedex/model/pokemon_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PokeNametype extends StatelessWidget {
   final PokemonModel pokemon;
@@ -8,21 +9,30 @@ class PokeNametype extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Row(
-        children: [
-          Text(
-            pokemon.name ?? '',
-            style: Constants.getPokemonNameTextStyle(),
-          ),
-          Text('#${pokemon.id}', style: Constants.getPokemonNameTextStyle())
-        ],
-      ),
-      Chip(
-          label: Text(
-        pokemon.type!.join(' , '),
-        style: Constants.getTypeChipTextStyle(),
-      ))
-    ]);
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 0.05.sh),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Text(
+                pokemon.name ?? '',
+                style: Constants.getPokemonNameTextStyle(),
+              ),
+            ),
+            Text('#${pokemon.num}', style: Constants.getPokemonNameTextStyle())
+          ],
+        ),
+        SizedBox(
+          height: 0.02.sh,
+        ),
+        Chip(
+            label: Text(
+          pokemon.type!.join(' , '),
+          style: Constants.getTypeChipTextStyle(),
+        ))
+      ]),
+    );
   }
 }

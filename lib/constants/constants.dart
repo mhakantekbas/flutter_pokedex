@@ -31,4 +31,15 @@ class Constants {
       return (size * 0.75).sp;
     }
   }
+
+  static getPokeLabelInfoTextStyle() {
+    return TextStyle(
+        fontSize: _calclateFontSize(20),
+        fontWeight: FontWeight.bold,
+        color: Colors.black);
+  }
+
+  static getPokeInfoTextStyle() {
+    return TextStyle(fontSize: _calclateFontSize(16));
+  }
 }
